@@ -3,14 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio von Timon Markwalder – Projekte, Skills und Kontakt." />
   <title>Timon Markwalder – Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Timon Markwalder</h1>
-    <p>Portfolio – im Aufbau</p>
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Hauptnavigation">
+      <a href="#home" class="nav__logo">TM</a>
+      <button class="nav__toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#about" class="nav__link">Über mich</a></li>
+        <li><a href="#projects" class="nav__link">Projekte</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#contact" class="nav__link">Kontakt</a></li>
+      </ul>
+    </nav>
   </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="container hero__content">
+        <p class="hero__greeting">Hallo, ich bin</p>
+        <h1 class="hero__title">Timon Markwalder</h1>
+        <p class="hero__subtitle">
+          <span class="typing" data-words='["Wirtschaftsinformatik-Student", "Junior Project Manager", "Mediamatiker"]'></span><span class="typing__cursor">|</span>
+        </p>
+        <a href="#projects" class="btn">Projekte ansehen</a>
+      </div>
+    </section>
+
+    <!-- Über mich -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section__title reveal">Über mich</h2>
+        <div class="about reveal">
+          <p>
+            [Platzhalter – Text folgt] Nach meiner Lehre als Mediamatiker mit Berufsmatura
+            studiere ich berufsbegleitend an der Berner Fachhochschule und arbeite als
+            Junior Project Manager im Bereich digitale Produkte.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projekte (werden per JavaScript aus projects.json geladen) -->
+    <section id="projects" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title reveal">Projekte</h2>
+        <div class="projects" id="projects-grid">
+          <p class="projects__loading">Projekte werden geladen …</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section__title reveal">Skills</h2>
+        <p class="reveal">[Platzhalter – folgt in einem späteren Schritt]</p>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="contact" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title reveal">Kontakt</h2>
+        <p class="reveal">[Platzhalter – Kontaktformular folgt in einem späteren Schritt]</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Timon Markwalder</p>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
